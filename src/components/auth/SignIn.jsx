@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import './SignIn.css';
-
+import "./SignIn.css";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -21,39 +20,38 @@ function SignIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         // Handle successful sign-in
-        console.error("Arre bc");
+        console.error("success");
       })
       .catch((error) => {
-        console.error("Error aaya ji, error", error);
+        console.error("Error occured while SignIn", error);
       });
   };
 
   return (
-   
-      <div className="signin-container">
-        <h2>Log in to your account</h2>
-        <form onSubmit={signIn}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Sign In</button>
-         
-         <a href="https://www.google.com" target="_blank">forgot password?</a>
+    <div className="signin-container">
+      <h2>Log in to your account</h2>
+      <form onSubmit={signIn}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Sign In</button>
 
-        </form>
-      </div>
- 
+        <a href="https://www.google.com" target="_blank">
+          forgot password?
+        </a>
+      </form>
+    </div>
   );
 }
 

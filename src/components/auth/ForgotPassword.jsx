@@ -1,15 +1,15 @@
 // ForgotPassword.js
-import React, { useState } from 'react';
-import { auth } from '../../firebase'; // Import your Firebase configuration
+import React, { useState } from "react";
+import { auth } from "../../firebase"; // Import your Firebase configuration
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleResetPassword = async () => {
     try {
       await auth.sendPasswordResetEmail(email);
-      setMessage('Password reset email sent. Check your inbox.');
+      setMessage("Password reset email sent. Check your inbox.");
     } catch (error) {
       setMessage(`Error: ${error.message}`);
     }

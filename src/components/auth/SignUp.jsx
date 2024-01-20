@@ -7,26 +7,17 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const signIn = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await signInWithEmailAndPassword(auth, email, password);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
   const SignUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         // Handle successful sign-in
-        console.error("Arre bc");
+        console.error("success");
       })
       .catch((error) => {
-        console.error("Error aaya ji, error", error);
+        console.error("Error occured while SignIn", error);
       });
   };
-
   return (
     <div className="signin-container">
       <h2>Create Account</h2>
