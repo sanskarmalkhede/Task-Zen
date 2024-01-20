@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "./firebase";
 import "./SignIn.css"; // Assuming you have a CSS file named SignIn.css in the same directory
 
 function SignUp() {
