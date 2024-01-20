@@ -35,7 +35,7 @@ const AuthDetails = () => {
           <button onClick={userSignOut}>Sign Out</button>
         </>
       ) : (
-        <p>Signed Out</p>
+        <span>Signed Out</span>
       )}
     </div>
   );

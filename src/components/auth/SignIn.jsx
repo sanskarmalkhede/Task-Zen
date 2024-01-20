@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import "./SignIn.css";
+import AuthDetails from "./AuthDetails";
+import SignUp from "./SignUp";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -47,10 +49,9 @@ function SignIn() {
         />
         <button type="submit">Sign In</button>
 
-        <a href="https://www.google.com" target="_blank">
-          forgot password?
-        </a>
+        <a href="/forgot-password">forgot password?</a>
       </form>
+      <AuthDetails />
     </div>
   );
 }
