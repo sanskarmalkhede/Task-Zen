@@ -5,6 +5,7 @@ import SignUp from "./components/auth/SignUp";
 import AuthDetails from "./components/auth/AuthDetails";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ForgotPassword from "./components/auth/ForgotPassword";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <BrowserRouter>
@@ -13,9 +14,9 @@ function App() {
           <Route path="/" element={<SignIn />} />
           <Route path="/home" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/dashboard" element={<Sidebar />} />
 
-
-
+          
         </Routes>
       </div>
     </BrowserRouter>
