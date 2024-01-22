@@ -1,0 +1,104 @@
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Updated to align items to the left */
+    margin-left: 20%;
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header h1 {
+    margin-left: 500px; /* Push the h1 to the left as much as possible */
+    margin-right: auto; /* Center the h1 */
+  }
+  
+  .icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 700px; /* Add margin to the left of the icon for spacing */
+  }
+  /* TaskForm.css */
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* TaskPage.css */
+
+div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffffff5e;
+}
+h1::selection {
+  color: #d4950b;
+}
+
+/* TaskList.css */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span {
+  flex-grow: 1;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
